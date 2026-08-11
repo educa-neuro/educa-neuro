@@ -1,0 +1,218 @@
+<!-- ===== HERO ===== -->
+<section class="tienda-hero">
+  <div class="container hero-grid" [class.animate]="heroVisible()">
+    <div class="hero-text">
+      <span class="badge-tienda">{{ 'tienda.badge' | translate }}</span>
+      <h1>{{ 'tienda.title' | translate }} <span class="text-green">{{ 'tienda.hl1' | translate }}</span>, <span class="text-orange">{{ 'tienda.hl2' | translate }}</span> {{ 'tienda.title2' | translate }}</h1>
+      <p>{{ 'tienda.desc' | translate }}</p>
+      <div class="mini-badges">
+        <span class="mini-b">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          {{ 'tienda.b1' | translate }}
+        </span>
+        <span class="mini-b">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          {{ 'tienda.b2' | translate }}
+        </span>
+        <span class="mini-b">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          {{ 'tienda.b3' | translate }}
+        </span>
+      </div>
+      <div class="hero-btns">
+        <a href="#categorias-tienda" class="btn btn-purple">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          {{ 'tienda.btn_explore' | translate }}
+        </a>
+        <a routerLink="/recursos" class="btn btn-outline">{{ 'tienda.btn_free' | translate }}</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/tienda.png" alt="Tienda EducaNeuro" class="hero-img" width="520" height="420" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-2col-section">
+  <div class="container feats-2col" [class.animate]="featsVisible()">
+    <div class="feat2">
+      <div class="f2-icon green-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <strong class="text-green">{{ 'tienda.f1' | translate }}</strong>
+        <p>{{ 'tienda.f1d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat2">
+      <div class="f2-icon purple-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <strong class="text-purple">{{ 'tienda.f2' | translate }}</strong>
+        <p>{{ 'tienda.f2d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat2">
+      <div class="f2-icon blue-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
+      </div>
+      <div>
+        <strong class="text-primary">{{ 'tienda.f3' | translate }}</strong>
+        <p>{{ 'tienda.f3d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat2">
+      <div class="f2-icon orange-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <div>
+        <strong class="text-orange">{{ 'tienda.f4' | translate }}</strong>
+        <p>{{ 'tienda.f4d' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORÍAS ===== -->
+<section class="cats-section" id="categorias-tienda">
+  <div class="container">
+    <div class="cats-header">
+      <h2>{{ 'tienda.cats_title' | translate }}</h2>
+      <a
+        href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20conocer%20todos%20los%20materiales%20disponibles%20en%20la%20tienda"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-small"
+      >{{ 'tienda.see_all' | translate }}</a>
+    </div>
+    <div class="cats-grid" [class.animate]="catsVisible()">
+
+      <div class="cat-card">
+        <div class="cat-preview blue-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h4 class="text-primary">{{ 'tienda.cat1' | translate }}</h4>
+        <p>{{ 'tienda.cat1d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Emociones"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow blue-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-preview green-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h4 class="text-green">{{ 'tienda.cat2' | translate }}</h4>
+        <p>{{ 'tienda.cat2d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Habilidades%20sociales"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow green-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-preview orange-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h4 class="text-orange">{{ 'tienda.cat3' | translate }}</h4>
+        <p>{{ 'tienda.cat3d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Autonom%C3%ADa"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow orange-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-preview blue2-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4 class="text-primary">{{ 'tienda.cat4' | translate }}</h4>
+        <p>{{ 'tienda.cat4d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Packs%20y%20kits"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow blue-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-preview teal-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h4 class="text-teal">{{ 'tienda.cat5' | translate }}</h4>
+        <p>{{ 'tienda.cat5d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Material%20educativo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow teal-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-preview purple-prev">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+        </div>
+        <h4 class="text-purple">{{ 'tienda.cat6' | translate }}</h4>
+        <p>{{ 'tienda.cat6d' | translate }}</p>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20ver%20los%20materiales%20de%20la%20categor%C3%ADa%3A%20Apoyos%20visuales"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cat-btn-arrow purple-arr"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-tienda">
+  <div class="container cta-inner" [class.animate]="ctaVisible()">
+    <div class="cta-icon-wrap">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+    </div>
+    <div class="cta-text">
+      <p>{{ 'tienda.cta_text' | translate }} <span class="text-green font-bold">{{ 'tienda.cta_hl' | translate }}</span> {{ 'tienda.cta_text2' | translate }}</p>
+      <p class="cta-sub-label">{{ 'tienda.cta_sub' | translate }}</p>
+    </div>
+    <div class="cta-btn-wrap">
+      <a
+        href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20conocer%20todos%20los%20materiales%20disponibles%20en%20la%20tienda"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-purple cta-shop-btn"
+      >
+        {{ 'tienda.cta_btn' | translate }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <p class="secure-note">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        {{ 'tienda.secure' | translate }}
+      </p>
+    </div>
+  </div>
+</section>

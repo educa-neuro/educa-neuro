@@ -1,0 +1,44 @@
+export interface Servicio {
+  slug: string;
+  color: 'blue' | 'green' | 'orange' | 'purple';
+  icon: 'graduation' | 'family' | 'home' | 'chalkboard';
+  bulletCount: number;
+  hasQuote?: boolean;
+  whatsappText: string;
+}
+
+export const SERVICIOS: Servicio[] = [
+  {
+    slug: 'acompanamiento-psicopedagogico',
+    color: 'blue',
+    icon: 'graduation',
+    bulletCount: 9,
+    whatsappText: 'Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20el%20acompa%C3%B1amiento%20psicopedag%C3%B3gico%20para%20mi%20hijo%2Fa',
+  },
+  {
+    slug: 'acompanamiento-familias',
+    color: 'green',
+    icon: 'family',
+    bulletCount: 6,
+    hasQuote: true,
+    whatsappText: 'Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20el%20acompa%C3%B1amiento%20a%20familias',
+  },
+  {
+    slug: 'educacion-en-casa',
+    color: 'orange',
+    icon: 'home',
+    bulletCount: 6,
+    whatsappText: 'Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20la%20educaci%C3%B3n%20en%20casa%20con%20acompa%C3%B1amiento%20psicopedag%C3%B3gico',
+  },
+  {
+    slug: 'formacion-docentes-familias',
+    color: 'purple',
+    icon: 'chalkboard',
+    bulletCount: 8,
+    whatsappText: 'Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20los%20talleres%20de%20formaci%C3%B3n%20para%20docentes%20y%20familias',
+  },
+];
+
+export function getServicio(slug: string): Servicio | undefined {
+  return SERVICIOS.find(s => s.slug === slug);
+}

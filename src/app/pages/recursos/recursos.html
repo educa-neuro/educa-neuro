@@ -1,0 +1,163 @@
+<section class="recursos-hero">
+  <div class="container hero-grid" [class.animate]="heroVisible()">
+    <div class="hero-text">
+      <span class="recursos-badge">{{ 'recursos.badge' | translate }}</span>
+      <h1>{{ 'recursos.title' | translate }} <span class="text-green">{{ 'recursos.hl1' | translate }}</span>, <span class="text-orange">{{ 'recursos.hl2' | translate }}</span> {{ 'recursos.title2' | translate }}</h1>
+      <p>{{ 'recursos.desc' | translate }}</p>
+      <div class="hero-btns">
+        <a href="#tipos-recursos" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          {{ 'recursos.btn_explore' | translate }}
+        </a>
+        <a routerLink="/cursos" class="btn btn-outline">{{ 'recursos.btn_courses' | translate }}</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/recursos.png" alt="Recursos EducaNeuro" class="hero-img" width="520" height="420" />
+    </div>
+  </div>
+</section>
+
+<section class="features-row-section">
+  <div class="container features-row" [class.animate]="featuresVisible()">
+    <div class="feat-item">
+      <div class="feat-icon green-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'recursos.f1' | translate }}</strong>
+        <p>{{ 'recursos.f1d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat-divider"></div>
+    <div class="feat-item">
+      <div class="feat-icon blue-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'recursos.f2' | translate }}</strong>
+        <p>{{ 'recursos.f2d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat-divider"></div>
+    <div class="feat-item">
+      <div class="feat-icon orange-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'recursos.f3' | translate }}</strong>
+        <p>{{ 'recursos.f3d' | translate }}</p>
+      </div>
+    </div>
+    <div class="feat-divider"></div>
+    <div class="feat-item">
+      <div class="feat-icon purple-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'recursos.f4' | translate }}</strong>
+        <p>{{ 'recursos.f4d' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tipos-section" id="tipos-recursos">
+  <div class="container tipos-layout">
+
+    <div class="tipos-col">
+      <h2>{{ 'recursos.tipos_title' | translate }}</h2>
+      <div class="tipos-grid" [class.animate]="tiposVisible()">
+        <div class="tipo-card">
+          <div class="tipo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#546e7a" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h4 class="text-green">{{ 'recursos.t1' | translate }}</h4>
+          <p>{{ 'recursos.t1d' | translate }}</p>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-icon orange-bg">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h4 class="text-orange">{{ 'recursos.t2' | translate }}</h4>
+          <p>{{ 'recursos.t2d' | translate }}</p>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-icon yellow-bg">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f9a825" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h4 class="text-orange">{{ 'recursos.t3' | translate }}</h4>
+          <p>{{ 'recursos.t3d' | translate }}</p>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-icon purple-bg">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h4 class="text-purple">{{ 'recursos.t4' | translate }}</h4>
+          <p>{{ 'recursos.t4d' | translate }}</p>
+        </div>
+        <div class="tipo-card wide">
+          <div class="tipo-icon blue-bg">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <div>
+            <h4 class="text-primary">{{ 'recursos.t5' | translate }}</h4>
+            <p>{{ 'recursos.t5d' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="que-box" [class.animate]="queVisible()">
+      <h3>{{ 'recursos.que_title' | translate }}</h3>
+      <ul class="check-list">
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'recursos.q1' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'recursos.q2' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'recursos.q3' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'recursos.q4' | translate }}
+        </li>
+      </ul>
+      <div class="que-stats">
+        <div class="que-stat">
+          <strong>+80</strong>
+          <span>{{ 'recursos.stat1' | translate }}</span>
+        </div>
+        <div class="que-stat-divider"></div>
+        <div class="que-stat">
+          <strong>5</strong>
+          <span>{{ 'recursos.stat2' | translate }}</span>
+        </div>
+        <div class="que-stat-divider"></div>
+        <div class="que-stat">
+          <strong>100%</strong>
+          <span>{{ 'recursos.stat3' | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-recursos">
+  <div class="container cta-inner" [class.animate]="ctaVisible()">
+    <div class="cta-icon-wrap">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#4caf50"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
+    <p><span class="text-green font-bold">{{ 'recursos.cta_text' | translate }}</span> <span class="text-green font-bold">{{ 'recursos.cta_hl' | translate }}</span></p>
+    <a routerLink="/cursos" class="btn btn-primary cta-btn">
+      {{ 'recursos.cta_btn' | translate }}
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,144 @@
+<!-- ===== HERO ===== -->
+<section class="servicios-hero">
+  <div class="container hero-inner" [class.animate]="heroVisible()">
+    <div class="hero-icon-wrap">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.7"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
+    <span class="servicios-badge">{{ 'servicios.badge' | translate }}</span>
+    <h1>{{ 'servicios.title' | translate }}</h1>
+    <p>{{ 'servicios.subtitle' | translate }}</p>
+  </div>
+</section>
+
+<!-- ===== GRID DE SERVICIOS ===== -->
+<section class="servicios-body">
+  <div class="container">
+    <div class="servicios-body-header">
+      <h2>{{ 'servicios.grid_title' | translate }}</h2>
+      <p>{{ 'servicios.grid_subtitle' | translate }}</p>
+    </div>
+    <div class="servicios-grid" [class.animate]="gridVisible()">
+      @for (s of servicios; track s.slug) {
+        <a [routerLink]="['/servicios', s.slug]" class="service-card" [class]="'card-' + s.color">
+          <div class="service-icon" [class]="s.color + '-ic'">
+            @switch (s.icon) {
+              @case ('graduation') {
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.333 2 8.667 2 12 0v-5"/></svg>
+              }
+              @case ('family') {
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              }
+              @case ('home') {
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+              }
+              @case ('chalkboard') {
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+              }
+            }
+          </div>
+          <h4>{{ 'servicios.s' + ($index + 1) + '.title' | translate }}</h4>
+          <p>{{ 'servicios.s' + ($index + 1) + '.desc' | translate }}</p>
+          <span class="service-link">
+            {{ 'servicios.see_detail' | translate }}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONDICIONES DEL SERVICIO ===== -->
+<section class="conditions-section">
+  <div class="container" [class.animate]="conditionsVisible()">
+    <h2>{{ 'servicios.conditions_title' | translate }}</h2>
+
+    <div class="conditions-cards">
+      <div class="condition-card">
+        <div class="condition-icon blue-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        </div>
+        <h4>{{ 'servicios.row1_service' | translate }}</h4>
+        <span class="condition-modality">{{ 'servicios.row1_modality' | translate }}</span>
+        <div class="condition-meta">
+          <span class="condition-duration">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'servicios.row1_duration' | translate }}
+          </span>
+          <span class="condition-cost">{{ 'servicios.row1_cost' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-icon green-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="15" height="13" rx="2"/><path d="M17 9l5-3v12l-5-3"/></svg>
+        </div>
+        <h4>{{ 'servicios.row2_service' | translate }}</h4>
+        <span class="condition-modality">{{ 'servicios.row2_modality' | translate }}</span>
+        <div class="condition-meta">
+          <span class="condition-duration">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'servicios.row2_duration' | translate }}
+          </span>
+          <span class="condition-cost">{{ 'servicios.row2_cost' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-icon purple-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h4>{{ 'servicios.row3_service' | translate }}</h4>
+        <span class="condition-modality">{{ 'servicios.row3_modality' | translate }}</span>
+        <div class="condition-meta">
+          <span class="condition-duration">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'servicios.row3_duration' | translate }}
+          </span>
+          <span class="condition-cost">{{ 'servicios.row3_cost' | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="conditions-rules-card">
+      <div class="rules-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <strong>{{ 'servicios.rules_title' | translate }}</strong>
+      </div>
+      <ul class="conditions-rules">
+        @for (i of [1,2,3,4,5,6,7,8,9]; track i) {
+          <li>
+            <span class="rule-chk">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            {{ 'servicios.rule' + i | translate }}
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-servicios">
+  <div class="container cta-inner" [class.animate]="ctaVisible()">
+    <div class="cta-left">
+      <div class="cta-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div class="cta-text">
+        <p class="cta-bold">{{ 'servicios.cta_title' | translate }}</p>
+        <p class="cta-sub">{{ 'servicios.cta_sub' | translate }}</p>
+      </div>
+    </div>
+    <a
+      href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20EducaNeuro"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-white cta-contact-btn"
+    >
+      {{ 'servicios.contact_whatsapp' | translate }}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>

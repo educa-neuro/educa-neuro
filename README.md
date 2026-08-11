@@ -1,0 +1,50 @@
+# EducaNeuro
+
+Plataforma educativa con enfoque neuroafirmativo para familias, docentes y profesionales. Capacitación basada en evidencia sobre autismo, TDAH, síndrome de Down y neurodiversidad.
+
+🌐 **Demo:** [https://alfredynhocg.github.io/educa-neuro/](https://alfredynhocg.github.io/educa-neuro/)
+
+---
+
+## Stack
+
+- **Angular 21** con componentes standalone
+- **SCSS** para estilos
+- **PWA** con Angular Service Worker
+- **GitHub Pages** para deploy
+
+---
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Desarrollo local
+
+```bash
+ng serve
+```
+
+Abre [http://localhost:4200](http://localhost:4200) en el navegador.
+
+## Build producción
+
+```bash
+ng build
+```
+
+Output en `dist/educa-neuro/browser`.
+
+## Deploy a GitHub Pages
+
+```bash
+npx ng deploy --base-href=/educa-neuro/
+```
+
+## Generar componente
+
+```bash
+ng generate component pages/nombre-componente
+```

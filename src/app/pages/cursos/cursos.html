@@ -1,0 +1,227 @@
+<section class="cursos-hero">
+  <div class="container hero-grid" [class.animate]="heroVisible()">
+    <div class="hero-text">
+      <span class="cursos-badge">{{ 'cursos.badge' | translate }}</span>
+      <h1>{{ 'cursos.title' | translate }} <span class="text-green">{{ 'cursos.hl1' | translate }}</span>{{ 'cursos.title2' | translate }} <span class="text-primary">{{ 'cursos.hl2' | translate }}</span></h1>
+      <p>{{ 'cursos.desc' | translate }}</p>
+      <div class="hero-btns">
+        <a href="#categorias-cursos" class="btn btn-primary">
+          {{ 'cursos.btn_explore' | translate }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a routerLink="/recursos" class="btn btn-outline">{{ 'cursos.btn_resources' | translate }}</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/cursos.png" alt="Cursos EducaNeuro" class="hero-img" width="520" height="420" />
+    </div>
+  </div>
+</section>
+
+<section class="features-row-section">
+  <div class="container features-row" [class.animate]="featuresVisible()">
+    <div class="feat-row-item">
+      <div class="fri-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'cursos.f1' | translate }}</strong>
+        <p>{{ 'cursos.f1d' | translate }}</p>
+      </div>
+    </div>
+    <div class="fri-divider"></div>
+    <div class="feat-row-item">
+      <div class="fri-icon blue">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'cursos.f2' | translate }}</strong>
+        <p>{{ 'cursos.f2d' | translate }}</p>
+      </div>
+    </div>
+    <div class="fri-divider"></div>
+    <div class="feat-row-item">
+      <div class="fri-icon orange">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'cursos.f3' | translate }}</strong>
+        <p>{{ 'cursos.f3d' | translate }}</p>
+      </div>
+    </div>
+    <div class="fri-divider"></div>
+    <div class="feat-row-item">
+      <div class="fri-icon purple">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <strong>{{ 'cursos.f4' | translate }}</strong>
+        <p>{{ 'cursos.f4d' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cats-section" id="categorias-cursos">
+  <div class="container cats-layout">
+
+    <div class="cats-left">
+      <div class="cats-header-row">
+        <h2>{{ 'cursos.cats_title' | translate }}</h2>
+        <a
+          href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20conocer%20todos%20los%20cursos%20disponibles%20de%20EducaNeuro"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-green"
+        >{{ 'cursos.see_all' | translate }}</a>
+      </div>
+      <div class="cats-grid" [class.animate]="catsVisible()">
+        <div class="cat-card">
+          <div class="cat-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#546e7a" stroke-width="1.5"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div class="cat-body">
+            <h4>{{ 'cursos.cat1' | translate }}</h4>
+            <p>{{ 'cursos.cat1d' | translate }}</p>
+            <div class="cat-footer">
+              <span class="cat-count">6 {{ 'cursos.courses' | translate }}</span>
+              <a
+                href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20cursos%20de%3A%20Comprender%20el%20autismo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cat-arrow"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cat-card green-accent">
+          <div class="cat-icon-wrap green">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div class="cat-body">
+            <h4 class="text-green">{{ 'cursos.cat2' | translate }}</h4>
+            <p>{{ 'cursos.cat2d' | translate }}</p>
+            <div class="cat-footer">
+              <span class="cat-count text-green">8 {{ 'cursos.courses' | translate }}</span>
+              <a
+                href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20cursos%20de%3A%20Estrategias%20pr%C3%A1cticas"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cat-arrow green"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cat-card orange-accent">
+          <div class="cat-icon-wrap orange">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="cat-body">
+            <h4 class="text-orange">{{ 'cursos.cat3' | translate }}</h4>
+            <p>{{ 'cursos.cat3d' | translate }}</p>
+            <div class="cat-footer">
+              <span class="cat-count text-orange">6 {{ 'cursos.courses' | translate }}</span>
+              <a
+                href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20cursos%20de%3A%20Comunicaci%C3%B3n%20y%20lenguaje"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cat-arrow orange"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cat-card purple-accent">
+          <div class="cat-icon-wrap purple">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <div class="cat-body">
+            <h4 class="text-purple">{{ 'cursos.cat4' | translate }}</h4>
+            <p>{{ 'cursos.cat4d' | translate }}</p>
+            <div class="cat-footer">
+              <span class="cat-count text-purple">5 {{ 'cursos.courses' | translate }}</span>
+              <a
+                href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20cursos%20de%3A%20Regulaci%C3%B3n%20emocional"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cat-arrow purple"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-box" [class.animate]="whyVisible()">
+      <h3>{{ 'cursos.why_title' | translate }}</h3>
+      <ul class="check-list">
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'cursos.why1' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'cursos.why2' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'cursos.why3' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'cursos.why4' | translate }}
+        </li>
+        <li>
+          <span class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          {{ 'cursos.why5' | translate }}
+        </li>
+      </ul>
+      <div class="why-stats">
+        <div class="why-stat">
+          <strong>+500</strong>
+          <span>{{ 'cursos.students' | translate }}</span>
+        </div>
+        <div class="why-stat-divider"></div>
+        <div class="why-stat">
+          <strong>25+</strong>
+          <span>{{ 'cursos.courses' | translate }}</span>
+        </div>
+        <div class="why-stat-divider"></div>
+        <div class="why-stat">
+          <strong>4.9</strong>
+          <span>{{ 'cursos.rating' | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-cursos">
+  <div class="container cta-inner" [class.animate]="ctaVisible()">
+    <div class="cta-icon-wrap">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
+    </div>
+    <div class="cta-text">
+      <p>{{ 'cursos.cta_text' | translate }} <span class="text-green">{{ 'cursos.cta_hl' | translate }}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#e91e63" style="vertical-align:middle;margin-left:4px"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </p>
+    </div>
+    <a
+      href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20conocer%20todos%20los%20cursos%20disponibles%20de%20EducaNeuro"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-cta-dark"
+    >
+      {{ 'cursos.cta_btn' | translate }}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>

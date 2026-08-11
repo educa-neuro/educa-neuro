@@ -1,0 +1,695 @@
+<section class="hero-slider">
+<div class="hero-slides-track">
+  <div class="hero-slide slide-inicio" [class.active]="heroSlide() === 0" [class.visible]="heroSlide() === 0 && heroVisible()">
+    <div class="container hs-grid">
+      <div class="hs-text">
+        <h1>{{ 'home.hero.slide0.title' | translate }} <span class="text-green">{{ 'home.hero.slide0.highlight' | translate }}</span></h1>
+        <p>{{ 'home.hero.slide0.desc' | translate }}</p>
+        <div class="hs-btns">
+          <a routerLink="/cursos" class="btn btn-green">
+            {{ 'home.hero.slide0.btn_courses' | translate }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a routerLink="/recursos" class="btn btn-outline-dark">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            {{ 'home.hero.slide0.btn_resources' | translate }}
+          </a>
+        </div>
+      </div>
+      <div class="hs-image">
+        <img src="assets/images/educa-autismo.png" alt="EducaNeuro" class="hs-img" width="520" height="420" />
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide slide-cursos" [class.active]="heroSlide() === 1" [class.visible]="heroSlide() === 1 && heroVisible()">
+    <div class="container hs-grid">
+      <div class="hs-text">
+        <span class="hs-badge badge-blue">{{ 'home.hero.slide1.badge' | translate }}</span>
+        <h1>{{ 'home.hero.slide1.title' | translate }} <span class="text-green">{{ 'home.hero.slide1.highlight' | translate }}</span>{{ 'home.hero.slide1.title2' | translate }}</h1>
+        <p>{{ 'home.hero.slide1.desc' | translate }}</p>
+        <div class="hs-btns">
+          <a routerLink="/cursos" class="btn btn-green">
+            {{ 'home.hero.slide1.btn' | translate }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hs-image">
+        <img src="assets/images/cursos.png" alt="Cursos EducaNeuro" class="hs-img" width="520" height="420" />
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide slide-recursos" [class.active]="heroSlide() === 2" [class.visible]="heroSlide() === 2 && heroVisible()">
+    <div class="container hs-grid">
+      <div class="hs-text">
+        <span class="hs-badge badge-green">{{ 'home.hero.slide2.badge' | translate }}</span>
+        <h1>{{ 'home.hero.slide2.title' | translate }} <span class="text-green">{{ 'home.hero.slide2.hl1' | translate }}</span>, <span class="text-orange">{{ 'home.hero.slide2.hl2' | translate }}</span> {{ 'home.hero.slide2.title2' | translate }}</h1>
+        <p>{{ 'home.hero.slide2.desc' | translate }}</p>
+        <div class="hs-btns">
+          <a routerLink="/recursos" class="btn btn-green">
+            {{ 'home.hero.slide2.btn' | translate }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hs-image">
+        <img src="assets/images/recursos.png" alt="Recursos EducaNeuro" class="hs-img" width="520" height="420" />
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide slide-webinars" [class.active]="heroSlide() === 3" [class.visible]="heroSlide() === 3 && heroVisible()">
+    <div class="container hs-grid">
+      <div class="hs-text">
+        <span class="hs-badge badge-teal">{{ 'home.hero.slide3.badge' | translate }}</span>
+        <h1>{{ 'home.hero.slide3.title' | translate }} <span class="text-green">{{ 'home.hero.slide3.hl1' | translate }}</span>, <span class="text-teal">{{ 'home.hero.slide3.hl2' | translate }}</span> {{ 'home.hero.slide3.title2' | translate }}</h1>
+        <p>{{ 'home.hero.slide3.desc' | translate }}</p>
+        <div class="hs-btns">
+          <a routerLink="/webinars" class="btn btn-green">
+            {{ 'home.hero.slide3.btn' | translate }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hs-image">
+        <img src="assets/images/webinar.png" alt="Webinars EducaNeuro" class="hs-img" width="520" height="420" />
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide slide-tienda" [class.active]="heroSlide() === 4" [class.visible]="heroSlide() === 4 && heroVisible()">
+    <div class="container hs-grid">
+      <div class="hs-text">
+        <span class="hs-badge badge-purple">{{ 'home.hero.slide4.badge' | translate }}</span>
+        <h1>{{ 'home.hero.slide4.title' | translate }} <span class="text-green">{{ 'home.hero.slide4.hl1' | translate }}</span>, <span class="text-orange">{{ 'home.hero.slide4.hl2' | translate }}</span> {{ 'home.hero.slide4.title2' | translate }}</h1>
+        <p>{{ 'home.hero.slide4.desc' | translate }}</p>
+        <div class="hs-btns">
+          <a routerLink="/tienda" class="btn btn-green">
+            {{ 'home.hero.slide4.btn' | translate }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hs-image">
+        <img src="assets/images/tienda.png" alt="Tienda EducaNeuro" class="hs-img" width="520" height="420" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="hs-controls">
+    <button class="hs-arrow" (click)="goToHeroSlide((heroSlide() - 1 + heroSlides.length) % heroSlides.length)" aria-label="Anterior">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="hs-dots">
+      @for (slide of heroSlides; track $index) {
+        <button
+          class="hs-dot"
+          [class.active]="$index === heroSlide()"
+          (click)="goToHeroSlide($index)"
+          [attr.aria-label]="slide.label"
+        >
+          <span class="hs-dot-pip"></span>
+          {{ slide.label }}
+        </button>
+      }
+    </div>
+    <button class="hs-arrow" (click)="goToHeroSlide((heroSlide() + 1) % heroSlides.length)" aria-label="Siguiente">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+</section>
+
+<section class="features-section">
+  <div class="container features-grid" [class.animate]="featuresVisible()">
+    <div class="feature-card">
+      <div class="feature-img-wrap green">
+        <img src="assets/images/home/evidencia_experiencia.png" alt="Evidencia y Experiencia" />
+      </div>
+      <h4 class="text-green">{{ 'home.features.f1_title' | translate }}</h4>
+      <p>{{ 'home.features.f1_desc' | translate }}</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-img-wrap blue">
+        <img src="assets/images/home/enfoque_neuroafirmativo.png" alt="Enfoque neuroafirmativo" />
+      </div>
+      <h4 class="text-primary">{{ 'home.features.f2_title' | translate }}</h4>
+      <p>{{ 'home.features.f2_desc' | translate }}</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-img-wrap orange">
+        <img src="assets/images/home/contexto_reales.png" alt="Contextos reales" />
+      </div>
+      <h4 class="text-orange">{{ 'home.features.f3_title' | translate }}</h4>
+      <p>{{ 'home.features.f3_desc' | translate }}</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-img-wrap purple">
+        <img src="assets/images/home/aprende_atu_ritmo.png" alt="Aprende a tu ritmo" />
+      </div>
+      <h4 style="color:var(--color-accent-purple)">{{ 'home.features.f4_title' | translate }}</h4>
+      <p>{{ 'home.features.f4_desc' | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="mid-section">
+  <div class="container mid-grid">
+    <div class="que-col">
+      <h2>{{ 'home.what.title' | translate }}</h2>
+      <div class="que-list" [class.animate]="queVisible()">
+        <div class="que-item">
+          <div class="que-icon green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.333 2 8.667 2 12 0v-5"/></svg>
+          </div>
+          <div>
+            <strong class="text-green">{{ 'home.what.i1_title' | translate }}</strong>
+            <p>{{ 'home.what.i1_desc' | translate }}</p>
+          </div>
+        </div>
+        <div class="que-item">
+          <div class="que-icon blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          </div>
+          <div>
+            <strong class="text-primary">{{ 'home.what.i2_title' | translate }}</strong>
+            <p>{{ 'home.what.i2_desc' | translate }}</p>
+          </div>
+        </div>
+        <div class="que-item">
+          <div class="que-icon orange">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+          </div>
+          <div>
+            <strong class="text-orange">{{ 'home.what.i3_title' | translate }}</strong>
+            <p>{{ 'home.what.i3_desc' | translate }}</p>
+          </div>
+        </div>
+        <div class="que-item">
+          <div class="que-icon purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          </div>
+          <div>
+            <strong style="color:var(--color-accent-purple)">{{ 'home.what.i4_title' | translate }}</strong>
+            <p>{{ 'home.what.i4_desc' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quien-col">
+      <h2>{{ 'home.who.title' | translate }}</h2>
+      <div class="quien-grid" [class.animate]="quienVisible()">
+        <div class="quien-card">
+          <div class="quien-avatar orange-bg">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.5"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6"/></svg>
+          </div>
+          <strong>{{ 'home.who.families' | translate }}</strong>
+          <p>{{ 'home.who.families_desc' | translate }}</p>
+        </div>
+        <div class="quien-card">
+          <div class="quien-avatar blue-bg">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <strong>{{ 'home.who.teachers' | translate }}</strong>
+          <p>{{ 'home.who.teachers_desc' | translate }}</p>
+        </div>
+        <div class="quien-card">
+          <div class="quien-avatar yellow-bg">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f9a825" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <strong>{{ 'home.who.professionals' | translate }}</strong>
+          <p>{{ 'home.who.professionals_desc' | translate }}</p>
+        </div>
+        <div class="quien-card">
+          <div class="quien-avatar pink-bg">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e91e8c" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <strong>{{ 'home.who.neurodivergent' | translate }}</strong>
+          <p>{{ 'home.who.neurodivergent_desc' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="quote-box" [style.--accent]="activeQuote.color">
+        <div class="quote-header">
+          <svg class="quote-marks" width="28" height="22" viewBox="0 0 32 26" fill="currentColor"><path d="M0 26V15.6C0 6.8 5.4 1.5 16.2 0l2 3.4C12 4.9 8.6 8.3 8 14h6V26H0zm18 0V15.6C18 6.8 23.4 1.5 34.2 0l2 3.4C30 4.9 26.6 8.3 26 14h6V26H18z"/></svg>
+          <span class="quote-role">{{ activeQuote.role }}</span>
+        </div>
+        <div class="quote-body" [class.visible]="visible()">
+          <p class="quote-text">{{ activeQuote.text }}</p>
+          <div class="quote-author">
+            <span class="quote-dash">—</span>
+            <span class="quote-author-name">{{ activeQuote.author }}</span>
+          </div>
+        </div>
+        <div class="quote-footer">
+          <div class="quote-dots">
+            @for (q of quotes; track $index) {
+              <button class="q-dot" [class.active]="$index === current()" (click)="goTo($index)" [attr.aria-label]="'Frase ' + ($index + 1)"></button>
+            }
+          </div>
+          <svg class="heart-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--color-primary)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIOS ===== -->
+<section class="testimonios-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="hs-badge badge-green" style="margin: 0 auto 0.75rem;">{{ 'home.testimonials.badge' | translate }}</span>
+      <h2>{{ 'home.testimonials.title' | translate }}</h2>
+      <p>{{ 'home.testimonials.subtitle' | translate }}</p>
+    </div>
+    <div class="testimonios-grid" [class.animate]="testimoniosVisible()">
+      <div class="testimonio-card">
+        <div class="testimonio-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonio-texto">{{ 'home.testimonials.t1_text' | translate }}</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar orange-bg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div>
+            <strong>{{ 'home.testimonials.t1_name' | translate }}</strong>
+            <span>{{ 'home.testimonials.t1_role' | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonio-texto">{{ 'home.testimonials.t2_text' | translate }}</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar blue-bg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div>
+            <strong>{{ 'home.testimonials.t2_name' | translate }}</strong>
+            <span>{{ 'home.testimonials.t2_role' | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f9a825"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonio-texto">{{ 'home.testimonials.t3_text' | translate }}</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar pink-bg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e91e8c" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div>
+            <strong>{{ 'home.testimonials.t3_name' | translate }}</strong>
+            <span>{{ 'home.testimonials.t3_role' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CURSOS DESTACADOS ===== -->
+@if (false) {
+<section class="cursos-dest-section">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="hs-badge badge-blue" style="margin-bottom: 0.5rem;">{{ 'home.courses.badge' | translate }}</span>
+        <h2>{{ 'home.courses.title' | translate }}</h2>
+      </div>
+      <a routerLink="/cursos" class="btn btn-green-outline ver-todos-btn">
+        {{ 'home.courses.see_all' | translate }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="cursos-dest-grid" [class.animate]="cursosDestVisible()">
+
+      <div class="curso-dest-card">
+        <div class="curso-dest-badge badge badge-blue">{{ 'home.courses.c1_badge' | translate }}</div>
+        <div class="curso-dest-icon blue-bg">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.333 2 8.667 2 12 0v-5"/></svg>
+        </div>
+        <div class="curso-dest-body">
+          <h4>{{ 'home.courses.c1_title' | translate }}</h4>
+          <p>{{ 'home.courses.c1_desc' | translate }}</p>
+          <div class="curso-dest-meta">
+            <span class="curso-nivel">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              {{ 'home.courses.c1_level' | translate }}
+            </span>
+            <span class="curso-duracion">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8 {{ 'home.courses.hours' | translate }}
+            </span>
+          </div>
+        </div>
+        <div class="curso-dest-footer">
+          <span class="curso-precio">Bs 120.00</span>
+          <a
+            href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20inscribirme%20al%20curso%3A%20Autismo%3A%20Fundamentos%20para%20Familias%20y%20Educadores"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm"
+          >{{ 'home.courses.see_course' | translate }}</a>
+        </div>
+      </div>
+
+      <div class="curso-dest-card">
+        <div class="curso-dest-badge badge badge-green">{{ 'home.courses.c2_badge' | translate }}</div>
+        <div class="curso-dest-icon green-bg">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+        </div>
+        <div class="curso-dest-body">
+          <h4>{{ 'home.courses.c2_title' | translate }}</h4>
+          <p>{{ 'home.courses.c2_desc' | translate }}</p>
+          <div class="curso-dest-meta">
+            <span class="curso-nivel">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              {{ 'home.courses.c2_level' | translate }}
+            </span>
+            <span class="curso-duracion">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              6 {{ 'home.courses.hours' | translate }}
+            </span>
+          </div>
+        </div>
+        <div class="curso-dest-footer">
+          <span class="curso-precio">Bs 95.00</span>
+          <a
+            href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20inscribirme%20al%20curso%3A%20TDAH%20en%20el%20Aula%3A%20Estrategias%20Pr%C3%A1cticas%20para%20Docentes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm"
+          >{{ 'home.courses.see_course' | translate }}</a>
+        </div>
+      </div>
+
+      <div class="curso-dest-card">
+        <div class="curso-dest-badge badge badge-orange">{{ 'home.courses.c3_badge' | translate }}</div>
+        <div class="curso-dest-icon orange-bg">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="curso-dest-body">
+          <h4>{{ 'home.courses.c3_title' | translate }}</h4>
+          <p>{{ 'home.courses.c3_desc' | translate }}</p>
+          <div class="curso-dest-meta">
+            <span class="curso-nivel">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              {{ 'home.courses.c3_level' | translate }}
+            </span>
+            <span class="curso-duracion">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5 {{ 'home.courses.hours' | translate }}
+            </span>
+          </div>
+        </div>
+        <div class="curso-dest-footer">
+          <span class="curso-precio">Bs 85.00</span>
+          <a
+            href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20inscribirme%20al%20curso%3A%20Acompa%C3%B1amiento%20Emocional%20en%20Familias%20de%20Ni%C3%B1os%20Neurodivergentes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm"
+          >{{ 'home.courses.see_course' | translate }}</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+}
+
+<!-- ===== SOBRE LA ESPECIALISTA ===== -->
+<section class="sobre-section">
+  <div class="container sobre-grid" [class.animate]="sobreVisible()">
+    <div class="sobre-img-col">
+      <div class="sobre-img-wrap">
+        <img src="assets/images/anne-perfil.jpg" alt="Especialista EducaNeuro" class="sobre-foto-real" width="280" height="280" />
+        <div class="sobre-chip sobre-chip-heart">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#1565c0"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="sobre-chip sobre-chip-brain">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="sobre-badge-float">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#2e7d32"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          {{ 'sobre.families' | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="sobre-text-col">
+      <span class="hs-badge badge-green" style="margin-bottom: 0.75rem;">{{ 'home.about.badge' | translate }}</span>
+      <h2>{{ 'home.about.title' | translate }}</h2>
+      <p class="sobre-intro">{{ 'home.about.intro' | translate }}</p>
+      <div class="sobre-credenciales">
+        <div class="sobre-cred-item">
+          <div class="sobre-cred-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>{{ 'home.about.cred1' | translate }}</span>
+        </div>
+        <div class="sobre-cred-item">
+          <div class="sobre-cred-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>{{ 'home.about.cred2' | translate }}</span>
+        </div>
+        <div class="sobre-cred-item">
+          <div class="sobre-cred-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>{{ 'home.about.cred3' | translate }}</span>
+        </div>
+        <div class="sobre-cred-item">
+          <div class="sobre-cred-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>{{ 'home.about.cred4' | translate }}</span>
+        </div>
+      </div>
+      <a routerLink="/sobre-mi" class="btn btn-outline" style="margin-top: 1.5rem; width: fit-content;">
+        {{ 'home.about.btn' | translate }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICIOS ===== -->
+<section class="servicios-home-section">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="hs-badge badge-blue" style="margin-bottom: 0.5rem;">{{ 'servicios.badge' | translate }}</span>
+        <h2>{{ 'home.services.title' | translate }}</h2>
+      </div>
+      <a routerLink="/servicios" class="btn btn-green-outline ver-todos-btn">
+        {{ 'home.services.see_all' | translate }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="servicios-home-grid" [class.animate]="serviciosVisible()">
+
+      <a routerLink="/servicios/acompanamiento-psicopedagogico" class="servicio-home-card">
+        <div class="servicio-home-icon blue-bg">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.6"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.333 2 8.667 2 12 0v-5"/></svg>
+        </div>
+        <h4>{{ 'servicios.s1.title' | translate }}</h4>
+        <p>{{ 'servicios.s1.desc' | translate }}</p>
+      </a>
+
+      <a routerLink="/servicios/acompanamiento-familias" class="servicio-home-card">
+        <div class="servicio-home-icon green-bg">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>{{ 'servicios.s2.title' | translate }}</h4>
+        <p>{{ 'servicios.s2.desc' | translate }}</p>
+      </a>
+
+      <a routerLink="/servicios/educacion-en-casa" class="servicio-home-card">
+        <div class="servicio-home-icon orange-bg">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.6"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        </div>
+        <h4>{{ 'servicios.s3.title' | translate }}</h4>
+        <p>{{ 'servicios.s3.desc' | translate }}</p>
+      </a>
+
+      <a routerLink="/servicios/formacion-docentes-familias" class="servicio-home-card">
+        <div class="servicio-home-icon purple-bg">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+        </div>
+        <h4>{{ 'servicios.s4.title' | translate }}</h4>
+        <p>{{ 'servicios.s4.desc' | translate }}</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD MAGNET ===== -->
+<section class="leadmagnet-section">
+  <div class="container leadmagnet-inner" [class.animate]="leadmagnetVisible()">
+    <div class="leadmagnet-icon-col">
+      <div class="leadmagnet-doc">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+    </div>
+    <div class="leadmagnet-text">
+      <span class="leadmagnet-tag">{{ 'home.leadmagnet.tag' | translate }}</span>
+      <h3>{{ 'home.leadmagnet.title' | translate }}</h3>
+      <p>{{ 'home.leadmagnet.desc' | translate }}</p>
+    </div>
+    <a
+      href="https://wa.me/59173029878?text=Hola%2C%20quisiera%20recibir%20la%20gu%C3%ADa%20gratuita%3A%2010%20estrategias%20para%20acompa%C3%B1ar%20a%20tu%20hijo%20con%20autismo%20en%20casa"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-white leadmagnet-btn"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      {{ 'home.leadmagnet.btn' | translate }}
+    </a>
+  </div>
+</section>
+
+<!-- ===== PRÓXIMOS WEBINARS ===== -->
+@if (false) {
+<section class="webinars-prox-section">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="hs-badge badge-teal" style="margin-bottom: 0.5rem;">{{ 'home.webinars.badge' | translate }}</span>
+        <h2>{{ 'home.webinars.title' | translate }}</h2>
+      </div>
+      <a routerLink="/webinars" class="btn btn-green-outline ver-todos-btn">
+        {{ 'home.webinars.see_all' | translate }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="webinars-prox-list" [class.animate]="webinarsVisible()">
+
+      <div class="webinar-prox-card">
+        <div class="webinar-fecha-col">
+          <div class="webinar-fecha-box teal">
+            <span class="wf-dia">22</span>
+            <span class="wf-mes">Ago</span>
+          </div>
+        </div>
+        <div class="webinar-info">
+          <span class="webinar-hora">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'home.webinars.live' | translate }}
+          </span>
+          <h4>{{ 'home.webinars.w1_title' | translate }}</h4>
+          <p>{{ 'home.webinars.w1_desc' | translate }}</p>
+        </div>
+        <a routerLink="/webinars" class="btn btn-outline webinar-btn">{{ 'home.webinars.register' | translate }}</a>
+      </div>
+
+      <div class="webinar-prox-card">
+        <div class="webinar-fecha-col">
+          <div class="webinar-fecha-box blue">
+            <span class="wf-dia">05</span>
+            <span class="wf-mes">Sep</span>
+          </div>
+        </div>
+        <div class="webinar-info">
+          <span class="webinar-hora">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'home.webinars.live' | translate }}
+          </span>
+          <h4>{{ 'home.webinars.w2_title' | translate }}</h4>
+          <p>{{ 'home.webinars.w2_desc' | translate }}</p>
+        </div>
+        <a routerLink="/webinars" class="btn btn-outline webinar-btn">{{ 'home.webinars.register' | translate }}</a>
+      </div>
+
+      <div class="webinar-prox-card">
+        <div class="webinar-fecha-col">
+          <div class="webinar-fecha-box orange">
+            <span class="wf-dia">19</span>
+            <span class="wf-mes">Sep</span>
+          </div>
+        </div>
+        <div class="webinar-info">
+          <span class="webinar-hora">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {{ 'home.webinars.live' | translate }}
+          </span>
+          <h4>{{ 'home.webinars.w3_title' | translate }}</h4>
+          <p>{{ 'home.webinars.w3_desc' | translate }}</p>
+        </div>
+        <a routerLink="/webinars" class="btn btn-outline webinar-btn">{{ 'home.webinars.register' | translate }}</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+}
+
+<section class="valores-section">
+  <div class="container valores-grid" [class.animate]="valoresVisible()">
+    <div class="valor-item">
+      <div class="valor-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <span>{{ 'home.valores.v1' | translate }}</span>
+    </div>
+    <div class="valor-item">
+      <div class="valor-icon-wrap green-heart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#2e7d32"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </div>
+      <span>{{ 'home.valores.v2' | translate }}</span>
+    </div>
+    <div class="valor-item">
+      <div class="valor-icon-wrap yellow-star">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f9a825" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span>{{ 'home.valores.v3' | translate }}</span>
+    </div>
+    <div class="valor-item">
+      <div class="valor-icon-wrap teal-hands">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00838f" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <span>{{ 'home.valores.v4' | translate }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-home">
+  <div class="container cta-inner" [class.animate]="ctaVisible()">
+    <div class="cta-icon-box">
+      <img src="assets/images/home/evidencia_experiencia.png" alt="EducaNeuro" />
+    </div>
+    <div class="cta-text">
+      <h3>{{ 'home.cta.title' | translate }}</h3>
+      <p class="cta-sub">{{ 'home.cta.sub' | translate }}</p>
+    </div>
+    <a routerLink="/cursos" class="btn-cta-green">
+      {{ 'home.cta.btn' | translate }}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>

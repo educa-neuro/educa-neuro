@@ -1,0 +1,88 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="navbar-inner container">
+
+    <a routerLink="/" class="navbar-logo" (click)="closeMenu()">
+      <img src="assets/images/educa-neuro.png" alt="EducaNeuro" class="logo-img" />
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen()">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">
+          <span class="nav-icon icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+          </span>
+          {{ 'nav.home' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/servicios" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-pink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </span>
+          {{ 'nav.services' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/cursos" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3.333 2 8.667 2 12 0v-5"/></svg>
+          </span>
+          {{ 'nav.courses' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/recursos" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </span>
+          {{ 'nav.resources' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/webinars" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-teal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </span>
+          {{ 'nav.webinars' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/tienda" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-purple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </span>
+          {{ 'nav.store' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/sobre-mi" routerLinkActive="active" (click)="closeMenu()">
+          <span class="nav-icon icon-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </span>
+          {{ 'nav.about' | translate }}
+        </a>
+      </li>
+    </ul>
+
+    <div class="navbar-actions">
+      <button class="lang-toggle" (click)="langService.toggle()" aria-label="Switch language">
+        <span class="lang-flag">{{ langService.currentLang() === 'es' ? '🇧🇴' : '🇺🇸' }}</span>
+        <span class="lang-code">{{ langService.currentLang() === 'es' ? 'EN' : 'ES' }}</span>
+      </button>
+      <a routerLink="/sobre-mi" class="btn-login" (click)="closeMenu()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{ 'nav.contact' | translate }}
+      </a>
+      <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir menú">
+        <span [class.open]="menuOpen()"></span>
+        <span [class.open]="menuOpen()"></span>
+        <span [class.open]="menuOpen()"></span>
+      </button>
+    </div>
+
+  </div>
+
+  @if (menuOpen()) {
+    <div class="mobile-overlay" (click)="closeMenu()"></div>
+  }
+</nav>
